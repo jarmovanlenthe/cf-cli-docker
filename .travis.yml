@@ -1,0 +1,9 @@
+language: bash
+
+services:
+- docker
+
+script:
+- docker build -t jarmovanlenthe/cf-cli:6 -f v6/Dockerfile
+- docker build -t jarmovanlenthe/cf-cli:7 -f v7/Dockerfile
+

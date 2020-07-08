@@ -1,5 +1,5 @@
 ARG BASE_IMAGE=ubuntu:20.04
-FROM BASE_IMAGE
+FROM ${BASE_IMAGE}
 
 RUN apt-get update -q && apt-get upgrade -yq && apt-get install -yq wget gnupg && \
 	wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | apt-key add - && \

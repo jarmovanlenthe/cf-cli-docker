@@ -6,4 +6,7 @@ services:
 script:
 - docker build -t jarmovanlenthe/cf-cli:6 v6/
 - docker build -t jarmovanlenthe/cf-cli:7 v7/
+- docker login --username ${DOCKERHUB_USERNAME} --password ${DOCKERHUB_TOKEN}
+- docker push jarmovanlenthe/cf-cli:6
+- docker push jarmovanlenthe/cf-cli:7
 
